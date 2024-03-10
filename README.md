@@ -15,19 +15,11 @@ Pytorch and Torch testing code of [CartoonGAN](http://openaccess.thecvf.com/cont
 - Torch
 
 ```
-git clone https://github.com/Yijunmaverick/CartoonGAN-Test-Pytorch-Torch
-cd CartoonGAN-Test-Pytorch-Torch
+!git clone https://github.com/vinaysai37/CartoonGAN.git
+cd CartoonGAN
 ```
 
 ## Pytorch
-
-The original pretrained models are Torch `nngraph` models, which cannot be loaded in Pytorch through `load_lua`. So I manually copy the weights (bias) layer by layer and convert them to `.pth` models. 
-
-- Download the converted models:
-
-```
-sh pretrained_model/download_pth.sh
-```
 
 - For testing:
 
@@ -36,13 +28,6 @@ python test.py --input_dir YourImgDir --style Hosoda --gpu 0
 ```
 
 ## Torch
-
-Working with the original models in Torch is also fine. I just convert the weights (bias) in their models from CudaTensor to FloatTensor so that `cudnn` is not required for loading models.
-
-- Download the converted models:
-
-```
-sh pretrained_model/download_t7.sh
 ```
 
 - For testing:
@@ -50,6 +35,7 @@ sh pretrained_model/download_t7.sh
 ```
 th test.lua -input_dir YourImgDir -style Hosoda -gpu 0
 ```
+
 
 ## Examples (Left: input, Right: output)
 
@@ -84,8 +70,6 @@ th test.lua -input_dir YourImgDir -style Hosoda -gpu 0
 - The training code should be similar to the popular GAN-based image-translation frameworks and thus is not included here.
 
 ## Acknowledgement
-
-- Many thanks to the authors for this cool work.
 
 - Part of the codes are borrowed from [DCGAN](https://github.com/soumith/dcgan.torch), [TextureNet](https://github.com/DmitryUlyanov/texture_nets), [AdaIN](https://github.com/xunhuang1995/AdaIN-style) and [CycleGAN](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix).
 
