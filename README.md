@@ -24,16 +24,14 @@ cd CartoonGAN
 - For testing:
 
 ```
-python test.py --input_dir YourImgDir --style Hosoda --gpu 0
+!python test.py --input_dir YourImgDir --style Hosoda --gpu 0
 ```
 
 ## Torch
-```
-
 - For testing:
 
 ```
-th test.lua -input_dir YourImgDir -style Hosoda -gpu 0
+!th test.lua -input_dir YourImgDir -style Hosoda -gpu 0
 ```
 
 
