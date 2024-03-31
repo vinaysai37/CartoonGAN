@@ -1,5 +1,5 @@
-# CartoonGAN
-Pytorch and Torch testing code of [CartoonGAN](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2205.pdf) `[Chen et al., CVPR18]`. With the released pretrained [models](http://cg.cs.tsinghua.edu.cn/people/~Yongjin/Yongjin.htm) by the authors, I made these simple scripts for a quick test.
+# Cartoonization
+Pytorch testing code of [CartoonGAN](http://openaccess.thecvf.com/content_cvpr_2018/CameraReady/2205.pdf) `[Chen et al., CVPR18]`.
 
 <p>
     <img src='test_output/demo_ori.gif' width=300 />
@@ -25,13 +25,6 @@ cd CartoonGAN
 
 ```
 !python test.py --input_dir YourImgDir --style Hosoda --gpu 0
-```
-
-## Torch
-- For testing:
-
-```
-!th test.lua -input_dir YourImgDir -style Hosoda -gpu 0
 ```
 
 
